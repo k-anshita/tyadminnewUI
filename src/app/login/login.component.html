@@ -1,0 +1,36 @@
+<!-- <div class="row">
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4">
+        <div class="box">
+            <h2 class="header">LOGIN</h2>
+            <div>
+                <input class="form-control" type="text" placeholder="username" value="" [(ngModel)]="username"><br>
+                <input class="form-control" type="password" placeholder="password" value="" [(ngModel)]="password"><br>
+                <button class="btn" (click)="save()">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-xl-4"></div>
+</div> -->
+
+<body>
+    <div id="particles-js" class="snow"></div>
+
+    <main>
+        <div class="left-side"></div>
+
+        <div class="right-side">
+            <form>
+
+                <label for="username">username</label>
+                <input type="text" placeholder="Enter username" name="username" required [(ngModel)]="username" />
+
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" required />
+
+                <button type="submit" class="login-btn" (click)="save()">Login</button>
+            </form>
+        </div>
+
+    </main>
+</body>
