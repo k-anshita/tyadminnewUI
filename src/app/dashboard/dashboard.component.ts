@@ -11,6 +11,7 @@ import {
   ApexFill
 } from "ng-apexcharts";
 import { UsertableService } from '../services/usertable.service';
+import { HistoryService } from '../services/history.service';
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -28,14 +29,18 @@ export type ChartOptions = {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  userData:any[]=[];
- 
-  constructor(private userService:UsertableService){}
- 
+  userData: any[] = [];
+  mailData: any[] = [];
+  reviewData: any[] = [];
 
-  
+  constructor(private userService: UsertableService, private historyService: HistoryService) { }
+
+
+
   ngOnInit() {
     this.getUserDetail();
+    this.emailHistory();
+    this.getReviewDetail();
   }
 
   getUserDetail() {
@@ -43,10 +48,21 @@ export class DashboardComponent {
       this.userData = x.data;
     });
   }
+
+  emailHistory() {
+    this.historyService.getEmailHistory().subscribe(x => {
+      this.mailData = x.data;
+    });
   }
-  
-  
-  
-    
-   
+  getReviewDetail() {
+    this.historyService.getReviewhistory().subscribe(x => {
+      this.reviewData = x.data;
+    });
+  }
+}
+
+
+
+
+
 
