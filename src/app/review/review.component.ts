@@ -8,16 +8,27 @@ import { HistoryService } from '../services/history.service';
 })
 export class ReviewComponent {
   reviewData: any[] = [];
+  searchQuery: string = '';
 
   constructor(private historyService: HistoryService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getUserDetail();
   }
 
   getUserDetail() {
     this.historyService.getReviewhistory().subscribe(x => {
       this.reviewData = x.data;
+    });
+  }
+
+  get filteredUsers(): any[] {
+    return this.reviewData.filter(review => {
+      // Filter logic based on the search query
+      return review.subject.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        review.message.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        review.email.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        review.createdDate.toLowerCase().includes(this.searchQuery.toLowerCase());
     });
   }
 }

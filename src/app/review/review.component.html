@@ -12,7 +12,7 @@
             <div class="nav-item d-flex align-items-center">
                 <i class="bx bx-search fs-4 lh-0"></i>
                 <input type="text" class="form-control border-0 shadow-none" placeholder="Search..."
-                    aria-label="Search..." />
+                    aria-label="Search..." [(ngModel)]="searchQuery"/>
             </div>
         </div>
         <!-- /Search -->
@@ -110,16 +110,16 @@
                                     <th>Subject</th>
                                     <th>Message</th>
                                     <th>Email</th>
-                                    <th>Created Date</th>
+                                    <th>Review Date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let review of reviewData;let i=index">
+                                <tr *ngFor="let review of filteredUsers;let i=index">
                                     <td>{{i+1}}</td>
                                     <td>{{review.subject}}</td>
                                     <td>{{review.message}}</td>
                                     <td>{{review.email}}</td>
-                                    <td>{{review.createdDate}}</td>
+                                    <td>{{review.createdDate | date:'dd/MM/yy'}}</td>
                                 </tr>
                             </tbody>
                         </table>

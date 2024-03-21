@@ -107,21 +107,19 @@
                             <thead>
                                 <tr>
                                     <th>NO</th>
-                                    <td>Id</td>
                                     <th>Card name</th>
                                     <th>Card number</th>
-                                    <th>Expiry month</th>
-                                    <th>Expiry year</th>
+                                    <!-- <th>Expiry month</th>
+                                    <th>Expiry year</th> -->
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr *ngFor="let payment of paymentData;let i=index">
                                     <td>{{i+1}}</td>
-                                    <td>{{payment.id}}</td>
                                     <td>{{payment.cardName}}</td>
                                     <td>{{payment.cardNumber}}</td>
-                                    <td>{{payment.expMonth}}</td>
-                                    <td>{{payment.expYear}}</td>
+                                    <!-- <td>{{payment.expMonth}}</td>
+                                    <td>{{payment.expYear}}</td> -->
                                 </tr>
                             </tbody>
                         </table>

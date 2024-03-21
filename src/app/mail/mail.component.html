@@ -107,14 +107,12 @@
                             <thead>
                                 <tr>
                                     <th>NO</th>
-                                    <td>Id</td>
                                     <th>Email</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr *ngFor="let mail of mailData;let i=index">
                                     <td>{{i+1}}</td>
-                                    <td>{{mail.id}}</td>
                                     <td>{{mail.email}}</td>
                                 </tr>
                             </tbody>
