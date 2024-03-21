@@ -8,6 +8,7 @@ import { HistoryService } from '../services/history.service';
 })
 export class MailComponent {
   mailData: any[] = [];
+  searchQuery: string = '';
 
   constructor(private historyService: HistoryService) { }
 
@@ -21,4 +22,10 @@ export class MailComponent {
     });
   }
 
+  get filteredUsers(): any[] {
+    return this.mailData.filter(mail => {
+      // Filter logic based on the search query
+      return mail.email.toLowerCase().includes(this.searchQuery.toLowerCase())
+    });
+  }
 }
