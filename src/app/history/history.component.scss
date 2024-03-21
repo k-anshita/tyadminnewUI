@@ -1,0 +1,29 @@
+.history{
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url("../../assets/theam/img/backgrounds/back2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 99vw;
+    padding: 20px;
+}
+.container-fluid{
+    padding-left: 15%;
+}
+#wrapper h1{
+    color: white;
+    margin: 10px;
+}
+.card{
+    background-color: rgba(0,0,0,0.50);
+    color: white;
+    padding: 30px;
+}
+
+.table th{
+    background-color: rgba(0,0,0,0.50);
+    color: white;
+}
+.table td{
+    background-color: rgba(0,0,0,0.30);
+    color: white;
+}

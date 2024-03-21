@@ -1,3 +1,4 @@
+<div class="delete-user">
 <div class="modal-header">
     <h5 class="modal-title" id="changepassword">Add Games</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
@@ -6,11 +7,12 @@
     </button>
 </div>
 <div class="modal-body">
-    Do you want to delete Game?<br />
+    Do you want to delete User?<br />
 
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+    <button type="button" class="btn  btn-cancel" data-dismiss="modal"
         (click)="activeModal.close('Close click')">Cancel</button>
-    <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteUser()">Delete</button>
+    <button type="button" class="btn btn-delete" data-dismiss="modal" (click)="deleteUser()">Delete</button>
+</div>
 </div>
