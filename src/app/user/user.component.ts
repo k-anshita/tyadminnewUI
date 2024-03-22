@@ -21,12 +21,13 @@ import { AddUserResModel, UserDetail } from '../models/user.model';
 export class TableComponent {
   userData: any[]=[];
   title: string = 'View Game History';
-
+  searchQuery: string = ''; // property to store the search query
+  
   constructor(private userService: UsertableService,
     private router: Router,
     private modalService: NgbModal,
     private toastr: ToastrService,
-  ) { }
+    ) { }
 
   ngOnInit() {
     this.getUserDetail();
@@ -60,6 +61,17 @@ export class TableComponent {
     } else {
       console.log('id is not defined');
     }
+  }
+
+
+  get  filteredUsers():any[] {
+    return this.userData.filter(user => {
+      // Filter logic based on the search query
+      return user.firstname.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+             user.lastname.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+             user.email.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+             user.username.toLowerCase().includes(this.searchQuery.toLowerCase());
+    });
   }
 
 }

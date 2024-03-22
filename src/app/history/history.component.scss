@@ -3,25 +3,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    width: 99vw;
+    width: 100%;
     padding: 20px;
 }
-.container-fluid{
-    padding-left: 15%;
-}
+// .container-fluid{
+//     padding-left: 15%;
+// }
 #wrapper h1{
     color: white;
     margin: 10px;
 }
 .card{
     background-color: rgba(0,0,0,0.50);
-    color: white;
     padding: 30px;
 }
 
 .table th{
     background-color: rgba(0,0,0,0.50);
-    color: white;
+    color:gray;
 }
 .table td{
     background-color: rgba(0,0,0,0.30);

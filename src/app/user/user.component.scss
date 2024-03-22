@@ -7,15 +7,15 @@
 //     margin-top:90px;
 // }
 .layout-navbar{
-    margin-left: 16%;
+    // margin-left: 16%;
     width: 80%;
 }
 .pointer{
     cursor: pointer;
 }
-.container-fluid{
-    padding-left: 15%;
-}
+// .container-fluid{
+//     padding-left: 15%;
+// }
 
 .users{
     background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url("../../assets/theam/img/backgrounds/back2.jpg");
@@ -24,16 +24,12 @@
     height: 100vh;
     padding: 20px;
 }
-.right{
-    float: right;
-    display: flex;
-    margin-left: 50px;
-}
+
 
 .excel img{
-    height: 50%;
-    width: 10%;
-    margin-top: 15px;
+    height: 100%;
+    width: 30%;
+    margin-right: 20px;
 }
 #wrapper h1{
     color: white;
@@ -41,16 +37,17 @@
 }
 .card{
     background-color: rgba(0,0,0,0.50);
-    color: white;
     padding: 30px;
 }
 
 
 .table th{
     background-color: rgba(0,0,0,0.70);
+    color:gray;
 }
 .table td{
     background-color: rgba(0,0,0,0.30);
+    color: white;
 }
          
 .btn-add-user{
