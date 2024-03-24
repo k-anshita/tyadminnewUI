@@ -1,0 +1,41 @@
+.delete-user{
+    background-color:black;
+    color: white;
+}
+.btn-delete{
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px #eee;
+    border: none;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-delete:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+  }
+ .btn-cancel{
+    background-image: linear-gradient(to right, #7f0808 0%, #da4126  51%, #8a0406  100%);
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-shadow: 0 0 10px #eee;
+    color: white;
+ }
+ .btn-cancel:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+ }
+ 

@@ -1,5 +1,6 @@
+<div class="adduser">
 <div class="modal-header">
-    <h5 class="modal-title" id="changepassword">ADD USER</h5>
+    <h5 class="modal-title text-light" id="changepassword">ADD USER</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
         (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
@@ -15,13 +16,16 @@
     [(ngModel)]="addUser.username"><br>
     <input class="form-control border1" type="password" value="" placeholder="Enter your password"
     [(ngModel)]="addUser.password"><br>
-    gender:<input type="radio" name="gender" value="male" [(ngModel)]="addUser.gender">male
-    <input type="radio" name="gender" value="female" [(ngModel)]="addUser.gender">female<br><br>
+ 
+    <input class="mx-3" type="radio" name="gender" value="male" [(ngModel)]="addUser.gender"><label for="" class="gender">male</label>
+    <input class="mx-3" type="radio" name="gender" value="female" [(ngModel)]="addUser.gender"><label for="" class="gender">female</label>
+<br><br>
     <input class="form-control border1" type="date" value="" placeholder="Enter your date" [(ngModel)]="addUser.date"><br>
 
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal"
-        (click)="activeModal.close('Close click')">Close</button>
-    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="add()">Add</button>
+    <button type="button" class="btn btn-danger" data-dismiss="modal"
+        (click)="activeModal.close('Close click')">CLOSE</button>
+    <button type="button" class="btn-add" data-dismiss="modal" (click)="add()">Add</button>
+</div>
 </div>

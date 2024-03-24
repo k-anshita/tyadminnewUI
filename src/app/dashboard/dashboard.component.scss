@@ -1,10 +1,35 @@
-#chart {
-    width: 300px;
-    height:500px;
-    margin: 35px auto;
-  }
-  
 
-.container-fluid{
-  padding-left: 18%;
-}
+  
+  .container-fluid h1{
+    color: white;
+    margin-left: 70px;
+  }
+  .dashboard-back{
+    background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url('../../assets/theam/img/backgrounds/back2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+   
+  }
+  .dashboard-back .first{
+    padding: 10px;
+  }
+  .report_data .row{
+    display: flex;
+    justify-content: center;
+  }
+  .report_data .row .card{
+    background: rgba(0,0,0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    height: 200px;
+    margin: 20px;
+    color: white;
+  }
+  .report_data .row .card:hover{
+    box-shadow: 0 0 10px white;
+  }
