@@ -7,7 +7,9 @@
   height: 64px;
   margin-top: 12px;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 .app-brand-logo.demo svg {
   width: 22px;
   height: 38px;

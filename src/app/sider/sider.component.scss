@@ -3,46 +3,59 @@
 //   position: fixed;
 //   top: 0;
 // }
+.logo {
+  width: 100%;
+}
+
 .sidebar-heading {
-    // padding: 15px;
-    text-align: left;
-    color: rgba(255, 255, 255, .4);
-  }
-  
-  .sidebar-heading {
-    // text-align: center;
-    padding: 0 1rem;
-    font-weight: 800;
-    font-size: 10px;
-  }
-  
-  .sidebar .sidebar-brand {
-    height: 4.375rem;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 800;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .05rem;
-    z-index: 1;
-    color: #fff;
-    width: 14rem !important;
-  }
-  
-  .sidebar {
-    ::ng-deep {
-      .nav-item .nav-link {
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 1rem;
-        max-width: 14rem;
-      }
+  // padding: 15px;
+  text-align: left;
+  color: rgba(255, 255, 255, .4);
+}
+
+.sidebar-heading {
+  // text-align: center;
+  padding: 0 1rem;
+  font-weight: 800;
+  font-size: 10px;
+}
+
+.sidebar .sidebar-brand {
+  height: 4.375rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  z-index: 1;
+  color: #fff;
+  width: 14rem !important;
+}
+
+.sidebar {
+  ::ng-deep {
+    .nav-item .nav-link {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 1rem;
+      max-width: 14rem;
     }
   }
+}
 
-  .pointer{
-    cursor: pointer;
-  }
+.pointer {
+  cursor: pointer;
+}
 
+.sidea {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 16%;
+  height: 100vh;
+  // background-color: #298ebf;
+  background-color: rgb(6, 70, 122);
+}
