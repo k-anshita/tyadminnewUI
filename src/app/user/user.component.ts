@@ -19,7 +19,7 @@ import { AddUserResModel, UserDetail } from '../models/user.model';
   styleUrls: ['./user.component.scss']
 })
 export class TableComponent {
-  userData: any[]=[];
+  userData:any[]=[];
   title: string = 'View Game History';
   searchQuery: string = ''; // property to store the search query
   
@@ -73,5 +73,35 @@ export class TableComponent {
              user.username.toLowerCase().includes(this.searchQuery.toLowerCase());
     });
   }
+
+  convertToExcel(data: any[]) {
+    let excelContent = 'data:text/csv;charset=utf-8,';
+    // Add headers
+    const headers = Object.keys(data[0]);
+    excelContent += headers.join(',') + '\n';
+    
+    // Add data rows
+    data.forEach((item) => {
+      const values = headers.map((header) => item[header]);
+      excelContent += values.join(',') + '\n';
+    });
+    
+    return encodeURI(excelContent);
+  }
+  downloadExcel() {
+    // Ensure that userData is populated
+    if (this.userData.length > 0) {
+      const excelData = this.convertToExcel(this.userData);
+      const link = document.createElement('a');
+      link.setAttribute('href', excelData);
+      link.setAttribute('download', 'data.csv');
+      document.body.appendChild(link);
+      link.click();
+    } else {
+      // Handle case where userData is empty or not yet fetched
+      console.log('User data is not available.');
+    }
+  }
+  
 
 }
