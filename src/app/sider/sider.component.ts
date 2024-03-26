@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./sider.component.scss']
 })
 export class SiderComponent {
-
+  isShowDeleteConfirmPopUp: boolean = true;
   constructor(private router: Router, private toastr: ToastrService) { }
 
   check_loginuser() {

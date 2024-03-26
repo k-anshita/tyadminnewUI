@@ -17,7 +17,7 @@ export class LoginComponent {
     private authService: AuthService) { }
 
   save() {
-    if (this.username != 'admin' || this.password != 'a123') {
+    if (this.username != 'admin' || this.password != 'admin@1234') {
       this.toastr.warning('your email or password wrong!!');
     }else  if (!String(this.username || '').trim()) {
       this.toastr.warning('please fill username');

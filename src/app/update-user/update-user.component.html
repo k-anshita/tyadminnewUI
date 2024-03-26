@@ -1,6 +1,5 @@
-<div class="updateuser">
 <div class="modal-header">
-    <h5 class="modal-title text-light" id="changepassword">Update User</h5>
+    <h5 class="modal-title" id="changepassword">Update USER</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
         (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
@@ -12,18 +11,17 @@
     <input class="form-control border1" type="text" value="" placeholder="Enter your lastName"
     [(ngModel)]="userDetails.lastname"><br>
     <input class="form-control border1" type="text" value="" placeholder="Enter your email" [(ngModel)]="userDetails.email"><br>
-    <input class="form-control border1" type="text" value="" placeholder="Enter your userName"
-    [(ngModel)]="userDetails.username"><br>
+    <!-- <input class="form-control border1" type="text" value="" placeholder="Enter your userName"
+    [(ngModel)]="userDetails.username"><br> -->
     <input class="form-control border1" type="password" value="" placeholder="Enter your password"
     [(ngModel)]="userDetails.password"><br>
-    <!-- <input type="radio" class="mx-3" name="gender" value="male" [(ngModel)]="userDetails.gender"><label for="" class="gender">male</label>
-    <input type="radio" class="mx-3" name="gender" value="female" [(ngModel)]="userDetails.gender"><label for="" class="gender">female</label><br><br>
+    <!-- gender:<input type="radio" name="gender" value="male" [(ngModel)]="userDetails.gender">male
+    <input type="radio" name="gender" value="female" [(ngModel)]="userDetails.gender">female<br><br>
     <input class="form-control border1" type="date" value="" placeholder="Enter your date" [(ngModel)]="userDetails.date"><br> -->
 
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-danger" data-dismiss="modal"
-        (click)="activeModal.close('Close click')">CLOSE</button>
-    <button type="button" class="btn btn-update" data-dismiss="modal" (click)="update()">Update</button>
-</div>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        (click)="activeModal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="update()">Update</button>
 </div>

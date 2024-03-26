@@ -27,7 +27,13 @@ export class UpdateUserComponent {
       this.toastr.warning('Please Enter user name');
     } else if (!String(this.userDetails.password || '').trim()) {
       this.toastr.warning('Please Enter password');
-    } else {
+     }
+     // else if (!String(this.userDetails.gender || '').trim()) {
+    //   this.toastr.warning('Please Enter gender');
+    // } else if (!String(this.userDetails.date || '').trim()) {
+    //   this.toastr.warning('Please Enter date');
+    // }
+     else {
       this.userService.updateUser(this.userDetails).subscribe(x => {
         this.toastr.success('user update successfully');
         this.activeModal.close();
