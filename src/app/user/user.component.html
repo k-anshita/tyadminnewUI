@@ -97,9 +97,10 @@
             <h4 class="col-8 m-0 font-weight-bold text-light">User Detail</h4>
            
             <a class="col-2 btn-add-user d-none d-sm-inline-block btn btn-sm shadow-sm align-item-right"  style="color:white;"
-              (click)="openUserModal()"><i class="fas fa-download fa-sm text-white-50"></i>Add user</a>
+              (click)="openUserModal()"><i class="fas fa-download fa-sm text-white-50" ></i>Add user</a>
               <div class="col-2 excel">
-                <img src="../../assets/theam/img/backgrounds/excel.png" alt="">
+                <button (click)="downloadExcel()">
+                <img src="../../assets/theam/img/backgrounds/excel.png" alt="">download</button>
               </div>
            
             
